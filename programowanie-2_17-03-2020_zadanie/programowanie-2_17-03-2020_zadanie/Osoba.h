@@ -6,10 +6,10 @@ using namespace std;
 
 class Osoba
 {
-private:
+public:
 	int Id;
 	string Nazwisko;
-public:
+	Osoba();
 	Osoba(int id, string nazwisko);
 };
 

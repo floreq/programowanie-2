@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "Osoba.h"
 #include "TabelaOsob.h"
 
@@ -7,24 +7,46 @@ using namespace std;
 
 int main()
 {
-	Osoba o1(1, "Kowalski");
-	TabelaOsob t1(5);
+	TabelaOsob t1(3);
+	TabelaOsob t2(t1);
+	TabelaOsob t3 = t2;
 
-    std::cout << "Hello World!\n";
+	cout << "T1\n"<< t1 << endl;
+	cout << "T2\n" << t2 << endl;
+	cout << "T3\n" << t3 << endl;
+
+	t2[0] = "Kowalski";
+	t3 = t2;
+
+	cout << "T2\n" << t2 << endl;
+	cout << "T3\n" << t3 << endl;
+
+	if (t3 == t2) {
+		cout << "Obiekty sa rowne" << endl;
+	}
+	else {
+		cout << "Obiekty sa rozne" << endl;
+	}
+
+	t2[2] = "Wasilewski";
+	cout << "t2[2] = \"Wasilewski\"" << endl;
+
+	if (t3 == t2) {
+		cout << "Obiekty sa rowne" << endl;
+	}
+	else {
+		cout << "Obiekty sa rozne" << endl;
+	}
+
+	cout << "\nT1" << endl;
+	cin >> t1;
+	cout << t1 << endl;
+
+	t3--;
+	cout << "t3--\n" << t3;
+
+	t1 += 10;
+	cout << "\nt1 += 10\n" << "t1\n" << t1 << endl;
+
 	system("pause");
 }
-
-
-//Napisaæ klasê Osoba z polami Id - int, Imie, Nazwisko - string, stworzyæ konstruktor z odpowiednimi parametrami
-//Napisaæ klasê TabelaOsob z tworzon¹ wewn¹trz dynamicznie tabel¹ z obiektami typu osoba.
-//Zdefiniowaæ:
-//Konstruktor z parametream okreœlaj¹cym iloœæ osób
-//Konstruktor kopiuj¹cy
-//Destruktor
-//operator=
-//operator ==
-//operator[] - umo¿liwiaj¹cy edycjê elementu o zadanym id
-//operator << -wyœwietlajacy zawartoœæ tabeli na konsoli
-//operator >> -wczytuj¹cy zawartoœæ tabeli z konsoli
-//operator -- - zmiejszaj¹cy rozmiar tabeli o 1 element(ostani element w tabeli jest pomijany)
-//operator += zwiêkszajacy rozmiar tabeli o n elementów

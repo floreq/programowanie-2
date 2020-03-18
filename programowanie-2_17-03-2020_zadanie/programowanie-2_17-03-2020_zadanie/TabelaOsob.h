@@ -11,5 +11,16 @@ private:
 	Osoba* array;
 public:
 	TabelaOsob(int size);
+	TabelaOsob(const TabelaOsob& other);
+	~TabelaOsob();
+
+	TabelaOsob& operator=(const TabelaOsob& other);
+	string& operator[](int id);
+	TabelaOsob& operator--(int);
+	void operator+=(int n);
+
+	friend ostream& operator<< (ostream& out, const TabelaOsob& other);
+	friend istream& operator>> (istream& in, const TabelaOsob& other);
+	friend bool operator==(const TabelaOsob& x, const TabelaOsob& y);
 };
 
