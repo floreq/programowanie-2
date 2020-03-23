@@ -15,7 +15,8 @@ public:
 	~TabelaOsob();
 
 	TabelaOsob& operator=(const TabelaOsob& other);
-	string& operator[](int id);
+	string& operator[](int id); // Pozwala zmienic Imie
+	string& operator[](char id); // Pozwala zmienic Nazwisko
 	TabelaOsob& operator--(int);
 	void operator+=(int n);
 

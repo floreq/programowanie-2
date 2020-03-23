@@ -6,7 +6,7 @@ TabelaOsob::TabelaOsob(int size)
 	this->array = new Osoba[size];
 	for (int i = 0; i < size; i++)
 	{
-		array[i] = Osoba(i, "-");
+		array[i] = Osoba(i, "-", "-");
 	}
 }
 
@@ -43,11 +43,26 @@ string& TabelaOsob::operator[](int id)
 	{
 		if (array[i].Id == id)
 		{
-			return array[id].Nazwisko;
+			return array[id].Imie;
 		}
 	}
 	throw "Brak podanego id";
 }
+
+string& TabelaOsob::operator[](char id)
+{
+	char intId = id - '0';
+	for (int i = 0; i < size; i++)
+	{
+		if (array[i].Id == intId)
+		{
+			return array[intId].Nazwisko;
+		}
+	}
+	throw "Brak podanego id";
+}
+
+
 
 TabelaOsob& TabelaOsob::operator--(int)
 {
@@ -75,7 +90,7 @@ void TabelaOsob::operator+=(int n)
 	}
 	// Inicjalizacja nowych wartosci
 	for (int i = oldSize; i < size; i++) {
-		array[i] = Osoba(i, "-");
+		array[i] = Osoba(i, "-", "-");
 	}
 }
 
@@ -83,7 +98,7 @@ ostream& operator<<(ostream& out, const TabelaOsob& other)
 {
 	for (int i = 0; i < other.size; i++)
 	{
-		out << "Id: " << other.array[i].Id << " Nazwisko: " << other.array[i].Nazwisko << endl;
+		out << "Id: " << other.array[i].Id << " Imie:" << other.array[i].Imie << " Nazwisko: " << other.array[i].Nazwisko << endl;
 	}
 	return out;
 }
@@ -94,6 +109,8 @@ istream& operator>>(istream& in, const TabelaOsob& other)
 	{
 		cout << "Podaj id: ";
 		in >> other.array[i].Id;
+		cout << "Podaj imie: ";
+		in >> other.array[i].Imie;
 		cout << "Podaj nazwisko: ";
 		in >> other.array[i].Nazwisko;
 	}
@@ -108,7 +125,7 @@ bool operator==(const TabelaOsob& x, const TabelaOsob& y)
 	}
 	for (int i = 0; i < x.size; i++)
 	{
-		if (x.array[i].Id != y.array[i].Id || x.array[i].Nazwisko != y.array[i].Nazwisko)
+		if (x.array[i].Id != y.array[i].Id || x.array[i].Imie != y.array[i].Imie || x.array[i].Nazwisko != y.array[i].Nazwisko)
 		{
 			return false;
 		}

@@ -15,7 +15,8 @@ int main()
 	cout << "T2\n" << t2 << endl;
 	cout << "T3\n" << t3 << endl;
 
-	t2[0] = "Kowalski";
+	t2[0] = "Jan";
+	t2['0'] = "Kowalski";
 	t3 = t2;
 
 	cout << "T2\n" << t2 << endl;

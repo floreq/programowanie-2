@@ -8,8 +8,9 @@ class Osoba
 {
 public:
 	int Id;
+	string Imie;
 	string Nazwisko;
 	Osoba();
-	Osoba(int id, string nazwisko);
+	Osoba(int id, string imie, string nazwisko);
 };
 
