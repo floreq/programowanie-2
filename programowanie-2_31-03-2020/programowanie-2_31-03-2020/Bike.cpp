@@ -9,13 +9,15 @@ Bike::Bike(int x, int y, double maxSpeed, int numberOfSeats, string color, int w
 
 void Bike::Display() const
 {
-	cout << "--- Bike (" << color << ") ---" << endl;
 	GoToXY(x, y);
-	cout << "   __o " << endl;
+	cout << "--- Bike (" << color << ") ---" << endl;
 	GoToXY(x, y + 1);
-	cout << " _ \<_ " << endl;
+	cout << "   __o " << endl;
 	GoToXY(x, y + 2);
+	cout << " _ \<_ " << endl;
+	GoToXY(x, y + 3);
 	cout << "(_)/(_)" << endl;
+	GoToXY(x, y + 4);
 	cout << "---------------------------" << endl;
 }
 
