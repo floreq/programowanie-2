@@ -12,9 +12,6 @@ VehicleCollection::VehicleCollection(int size)
 
 VehicleCollection::~VehicleCollection()
 {
-	for (int i = 0; i < nextEmptyIndex; i++) {
-		delete[] array[i];
-	}
 	delete[] array;
 	nextEmptyIndex = 0;
 }
