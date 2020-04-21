@@ -17,7 +17,7 @@ public:
 	~TPracownik();
 
 	string GetNazwisko() const;
-	void SetImie(string nazwisko);
+	void SetImie(string imie);
 
 	friend ostream& operator<< (ostream& out, const TPracownik& other);
 	bool operator== (const TPracownik& other) const;

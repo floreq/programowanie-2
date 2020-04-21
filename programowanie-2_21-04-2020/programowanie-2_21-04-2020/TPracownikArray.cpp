@@ -40,7 +40,7 @@ TPracownik& TPracownikArray::operator[](int i)
 		return this->array[i];
 	}
 	else {
-		throw "Index out of range";
+		throw "Brak indeksu";
 	}
 }
 
@@ -52,8 +52,11 @@ bool TPracownikArray::operator!=(const TPracownikArray& other) const
 		if (this->array[i] == other.array[i]) {
 			return false;
 		}
+		else {
+			return true;
+		}
 	}
-	return true;
+	return false;
 }
 
 
