@@ -43,18 +43,12 @@ TPracownik& TPracownikArray::operator[](int i)
 		throw "Brak indeksu";
 	}
 }
-
 bool TPracownikArray::operator!=(const TPracownikArray& other) const
 {
 	if (size != other.size) return true;
 	for (int i = 0; i < size; i++)
 	{
-		if (this->array[i] == other.array[i]) {
-			return false;
-		}
-		else {
-			return true;
-		}
+		if (!(this->array[i] == other.array[i])) return true;
 	}
 	return false;
 }
