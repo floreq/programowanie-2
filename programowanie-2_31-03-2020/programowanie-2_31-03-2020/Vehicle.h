@@ -13,8 +13,9 @@ public:
 	virtual void SetY(int newY);
 	virtual void MoveTo(int newX, int newY);
 	virtual void MoveBy(int deltaX, int deltaY);
-	void GoToXY(int x, int y) const;
 
 	virtual void Display() const = 0; // funkcja czysto wirtualna (klasa staje sie abstrakcyjna)
 };
+
+void GoToXY(int x, int y);
 

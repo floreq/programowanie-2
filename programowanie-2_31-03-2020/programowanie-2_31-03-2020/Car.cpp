@@ -8,6 +8,11 @@ Car::Car(int x, int y, double maxSpeed, int numberOfSeats, string color) : LandV
 	this->color = color;
 }
 
+void Car::MoveBy(int deltaX, int deltaY)
+{
+	Vehicle::MoveBy(2 * deltaX, 2 * deltaY);
+}
+
 void Car::Display() const
 {
 	GoToXY(x, y);

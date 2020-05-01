@@ -43,7 +43,7 @@ void Vehicle::MoveBy(int deltaX, int deltaY)
 	y += deltaY;
 }
 
-void Vehicle::GoToXY(int x, int y) const
+void GoToXY(int x, int y)
 {
 	COORD c = { x, y };
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), c);

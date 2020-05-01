@@ -151,19 +151,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Amphibia.cpp" />
     <ClCompile Include="Bike.cpp" />
+    <ClCompile Include="Boat.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="LandVehicle.cpp" />
     <ClCompile Include="programowanie-2_31-03-2020.cpp" />
     <ClCompile Include="Vehicle.cpp" />
     <ClCompile Include="VehicleCollection.cpp" />
+    <ClCompile Include="WaterBike.cpp" />
+    <ClCompile Include="WaterVehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Amphibia.h" />
     <ClInclude Include="Bike.h" />
+    <ClInclude Include="Boat.h" />
     <ClInclude Include="Car.h" />
     <ClInclude Include="LandVehicle.h" />
     <ClInclude Include="Vehicle.h" />
     <ClInclude Include="VehicleCollection.h" />
+    <ClInclude Include="WaterBike.h" />
+    <ClInclude Include="WaterVehicle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
