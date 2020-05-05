@@ -2,7 +2,7 @@
 #include "Boat.h"
 #include "Car.h"
 
-class Amphibia: public Boat, public Car
+class Amphibia: virtual public Boat, virtual public Car
 {
 public:
 	Amphibia(int x, int y, double length, double beam, double maxSpeed, int numberOfSeats, string color);

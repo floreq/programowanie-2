@@ -1,7 +1,7 @@
 #pragma once
 #include "Vehicle.h"
 class WaterVehicle :
-	public Vehicle
+	virtual public Vehicle
 {
 protected:
 	double length;

@@ -28,8 +28,7 @@ int main()
 	//collection2.AddVehicle(new Boat(20, 10, 11, 5));
 	//collection2.DisplayAllVehicles();
 
-	//Amphibia a1(30, 10, 11, 3, 120, 4, "blue");
-	//a1.Display();
+	Amphibia a1(30, 10, 11, 3, 120, 4, "blue");
 
 	Vehicle* wsv;
 	//Car* wsc;
@@ -51,8 +50,16 @@ int main()
 	w1.GetNumberOfSeats();
 	w1.Display();
 	
-	//wsv = &w1;
+	wsv = &a1; // Mozna uzyc dziedziczenie virtual, trzeba w tedy wszystkim klasa dodac wywolanie konstruktora
+	wsv->Display();
+	cout << wsv->GetX() << endl;
+	wsv->SetX(40);
+	cout << wsv->GetX() << endl;
+	// Jak modyfikujemy, np. x w jednym miejscu to wszedzie sie zmienia, dzialanie virtualne
 
+	wsv = &w1;
+	wsv->SetY(20);
+	wsv->Display();
 
 	system("pause");
 }

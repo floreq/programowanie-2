@@ -1,7 +1,7 @@
 #include "Bike.h"
 #include <iostream>
 
-Bike::Bike(int x, int y, double maxSpeed, int numberOfSeats, string color, int wheelSize) : LandVehicle(x, y, maxSpeed, numberOfSeats)
+Bike::Bike(int x, int y, double maxSpeed, int numberOfSeats, string color, int wheelSize) : Vehicle(x, y), LandVehicle(x, y, maxSpeed, numberOfSeats)
 {
 	this->color = color;
 	this->wheelSize = wheelSize;

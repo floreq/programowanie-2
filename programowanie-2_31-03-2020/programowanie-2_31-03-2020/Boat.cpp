@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Boat::Boat(int x, int y, double length, double beam): WaterVehicle(x, y, length)
+Boat::Boat(int x, int y, double length, double beam): Vehicle(x, y), WaterVehicle(x, y, length)
 {
 	this->beam = beam;
 }

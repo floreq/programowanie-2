@@ -3,7 +3,7 @@
 
 using namespace std;
 
-Car::Car(int x, int y, double maxSpeed, int numberOfSeats, string color) : LandVehicle(x, y, maxSpeed, numberOfSeats)
+Car::Car(int x, int y, double maxSpeed, int numberOfSeats, string color) : Vehicle(x, y), LandVehicle(x, y, maxSpeed, numberOfSeats)
 {
 	this->color = color;
 }

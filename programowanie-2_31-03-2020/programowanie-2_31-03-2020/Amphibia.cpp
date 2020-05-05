@@ -3,8 +3,13 @@
 
 using namespace std;
 
+// Dziedziczenie virtualne, musimy wywolac wszystkie konstruktory z klas dziedziczacych. Wszystkie konstruktory z dziedziczenia virtualnego
 Amphibia::Amphibia(int x, int y, double length, double beam, double maxSpeed, int numberOfSeats, string color): 
-	Boat(x, y, length, beam), Car(x, y, maxSpeed, numberOfSeats, color)
+	Vehicle(x, y), 
+	LandVehicle(x, y, maxSpeed, numberOfSeats), 
+	WaterVehicle(x, y, length), 
+	Boat(x, y, length, beam), 
+	Car(x, y, maxSpeed, numberOfSeats, color)
 {
 }
 

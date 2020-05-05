@@ -2,7 +2,7 @@
 #include "Bike.h"
 #include "WaterVehicle.h"
 
-class WaterBike: public Bike, public WaterVehicle
+class WaterBike: virtual public Bike, virtual public WaterVehicle
 {
 public:
 	WaterBike(int x, int y, double maxSpeed, int numberOfSeats, string color, int wheelSize, double length);

@@ -2,7 +2,7 @@
 #include <iostream>
 
 WaterBike::WaterBike(int x, int y, double maxSpeed, int numberOfSeats, string color, int wheelSize, double length):
-	Bike(x, y, maxSpeed, numberOfSeats, color, wheelSize), WaterVehicle(x, y, length)
+	Vehicle(x, y), LandVehicle(x, y, maxSpeed, numberOfSeats), Bike(x, y, maxSpeed, numberOfSeats, color, wheelSize), WaterVehicle(x, y, length)
 {
 }
 

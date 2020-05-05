@@ -1,7 +1,7 @@
 #pragma once
 #include "Vehicle.h"
 class LandVehicle :
-	public Vehicle
+	virtual public Vehicle
 {
 protected: 
 	double maxSpeedOnTheLand;

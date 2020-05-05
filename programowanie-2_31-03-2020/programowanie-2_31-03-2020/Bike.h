@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 class Bike :
-	public LandVehicle
+	virtual public LandVehicle
 {
 protected:
 	string color;

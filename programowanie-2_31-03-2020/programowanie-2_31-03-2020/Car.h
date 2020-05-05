@@ -4,7 +4,7 @@
 using namespace std;
 
 class Car :
-	public LandVehicle
+	virtual public LandVehicle
 {
 protected:
 	string color;
